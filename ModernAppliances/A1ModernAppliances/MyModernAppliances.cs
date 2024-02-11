@@ -214,18 +214,13 @@ namespace ModernAppliances
         public override void DisplayDishwashers()
         {
             // Write "Possible options:"
-            Console.WriteLine("Possible options: ");
             // Write "0 - Any"
-            Console.WriteLine("0 - Any");
             // Write "1 - Quietest"
-            Console.WriteLine("1 - Quietest");
             // Write "2 - Quieter"
-            Console.WriteLine("2 - Quieter");
             // Write "3 - Quiet"
-            Console.WriteLine("3 - Quiet");
             // Write "4 - Moderate"
-            Console.WriteLine("4 - Moderate");
-
+            Console.WriteLine("Possible options:\n0 - Any\n1 - Quietest\n2 - Quieter\n3 - Quiet\n4 - Moderate");
+            
             // Write "Enter sound rating:"
             Console.WriteLine("Enter sound rating: "); 
 
@@ -233,52 +228,53 @@ namespace ModernAppliances
             string soundRating = Console.ReadLine();
 
             // Create variable that holds sound rating
-            string rating;
+            
 
             // Test input is "0"
             if (soundRating == "0")
             {
                 // Assign "Any" to sound rating variable
-                rating = "Any";
+                soundRating = "Any";
             }
             // Test input is "1"
             else if (soundRating == "1")
             {
                 // Assign "Qt" to sound rating variable
-                rating = "Qt";
+                soundRating = "Qt";
             }
             // Test input is "2"
             else if (soundRating == "2")
             {
                 // Assign "Qr" to sound rating variable
-                rating = "Qr";
+                soundRating = "Qr";
             }
             // Test input is "3"
             else if (soundRating == "3")
             {
                 // Assign "Qu" to sound rating variable
-                rating = "Qu";
+                soundRating = "Qu";
             }
             // Test input is "4"
             else if (soundRating == "4")
             {
                 // Assign "M" to sound rating variable
-                rating = "M"
+                soundRating = "M";
 
             }
             else
             {
-                Console.WriteLine("Invaild option.");
+                // Otherwise (input is something else)
+                // Write "Invalid option."
+                // Return to calling method
+                Console.WriteLine("Invalid option.");
+                
                 return;
             }
-            
-            // Otherwise (input is something else)
-            // Write "Invalid option."
-            // Return to calling method
 
             // Create variable that holds list of found appliances
 
-            if (soundoptions
+            List<Appliance> foundAppliances = new List<Appliance>();
+
 
 
 
