@@ -72,7 +72,7 @@ namespace ModernAppliances
         public override void DisplayRefrigerators()
         {
             // Write "Possible options:"
-            Console.WriteLine("Possible Options\n0 - Any\n2 - Double Doors\n3 - Three Doors\n4 - Fouor Doors")
+            Console.WriteLine("Possible Options\n0 - Any\n2 - Double Doors\n3 - Three Doors\n4 - Four Doors")
             // Write "0 - Any"
             // Write "2 - Double doors"
             // Write "3 - Three doors"
