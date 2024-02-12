@@ -192,12 +192,17 @@ namespace ModernAppliances
             // Write "0 - Any"
             // Write "1 - Kitchen"
             // Write "2 - Work site"
+            Console.WriteLine("Possible options:\n0 - Any\n1 - Kitchen\n2 - Work site");
 
             // Write "Enter room type:"
+            Console.WriteLine("Enter room type: ");
+            
 
             // Get user input as string and assign to variable
 
+
             // Create character variable that holds room type
+            string roomType = Console.ReadLine();
 
             // Test input is "0"
                 // Assign 'A' to room type variable
@@ -209,23 +214,50 @@ namespace ModernAppliances
                 // Write "Invalid option."
                 // Return to calling method
                 // return;
+                if (roomType == "0")
+                {
+                    roomType = "A";
+                }
+                else if (roomType == "1")
+                {
+                    roomType = "K";
+                }
+                else if (roomType == "2")
+                {
+                    roomType = "W";
+                }
+                else
+                {
+                    Console.WriteLine("Invalid option.");
+                
+                    return;
+                }
+                
 
             // Create variable that holds list of 'found' appliances
-
+            List<Appliance> foundAppliances = Appliances;
+            
             // Loop through Appliances
                 // Test current appliance is Microwave
                     // Down cast Appliance to Microwave
+            foreach (var appliance in foundAppliances)
+            {
+                if (appliance is Microwave)
+                {
+                    Console.WriteLine(true);
+                }
+                else
+                {
+                    Console.WriteLine(false);
+                }
+                        
+            }
 
                     // Test room type equals 'A' or microwave room type
                         // Add current appliance in list to found list
 
             // Display found appliances
             // DisplayAppliancesFromList(found, 0);
-        }
-
-        /// <summary>
-        /// Displays dishwashers
-        /// </summary>
         public override void DisplayDishwashers()
         {
             // Write "Possible options:"
