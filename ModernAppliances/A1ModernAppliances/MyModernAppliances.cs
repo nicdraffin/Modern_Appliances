@@ -101,30 +101,38 @@ namespace ModernAppliances
         {
             // Write "Possible options:"
             Console.WriteLine("Possible options:");
-
+        
             // Write "0 - Any"
             Console.WriteLine("0 - Any");
-
+        
             // Write "2 - Double doors"
             Console.WriteLine("2 - Double doors");
-
+        
             // Write "3 - Three doors"
             Console.WriteLine("3 - Three doors");
-
+        
             // Write "4 - Four doors"
             Console.WriteLine("4 - Four doors");
-
+        
             // Write "Enter number of doors: "
             Console.WriteLine("Enter number of doors: ");
-
+        
             // Create variable to hold entered number of doors
-
+            int numDoors;
+        
             // Get user input as string and assign to variable
-            string numberOfDoors = Console.ReadLine();
-
+            string? userinput = Console.ReadLine();
+        
             // Create list to hold found Appliance objects
             List<Appliance> found = new List<Appliance>();
-
+        
+            // Convert user input from string to int and store as number of doors variable.
+            if (!int.TryParse(userinput, out numDoors))
+            {
+                Console.WriteLine("Please enter a valid input.");
+                return;
+            }
+        
             // Iterate/loop through Appliances
             foreach (Appliance appliance in found)
             {
@@ -133,17 +141,17 @@ namespace ModernAppliances
                 {
                     // Down cast Appliance to Refrigerator
                     Refrigerator refrigerator = (Refrigerator)appliance;
-
+        
                     // Test user entered 0 or refrigerator doors equals what user entered.
-                    if (numberOfDoors == "0" || numberOfDoors == "2" ||  numberOfDoors == "3" || numberOfDoors == "4")
+                    if (numDoors == 0 || refrigerator.Doors == numDoors)
                     {
                         // Add current appliance in list to found list
                         found.Add(appliance);
                     }
                 }
             }
-        
             // Display found appliances
+        
             DisplayAppliancesFromList(found, 0);
         }
 
