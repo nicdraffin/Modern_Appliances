@@ -81,7 +81,7 @@ namespace ModernAppliances
             string userInput = Console.ReadLine();
         
             // Create list to hold found Appliance objects
-            List<Appliance> found = new List<Appliances>;
+            List<Appliance> found = new List<Appliance>();
         
             // Iterate through loaded appliances
             foreach (Appliance appliance in found)
@@ -135,7 +135,7 @@ namespace ModernAppliances
                     Refrigerator refrigerator = (Refrigerator)appliance;
 
                     // Test user entered 0 or refrigerator doors equals what user entered.
-                    if (numberOfDoors == "0"  numberOfDoors == "2"  numberOfDoors == "3" || numberOfDoors == "4")
+                    if (numberOfDoors == "0" || numberOfDoors == "2" ||  numberOfDoors == "3" || numberOfDoors == "4")
                     {
                         // Add current appliance in list to found list
                         found.Add(appliance);
