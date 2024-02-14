@@ -154,68 +154,126 @@ namespace ModernAppliances
         public override void DisplayVacuums()
         {
             // Write "Possible options:"
-
+            Console.WriteLine("Possible options: ");
+         
             // Write "0 - Any"
             // Write "1 - Residential"
             // Write "2 - Commercial"
-
+            Console.WriteLine("0 - Any");
+            Console.WriteLine("1 - Residential");
+            Console.WriteLine("2 - Commericial");
+         
             // Write "Enter grade:"
-
+            Console.WriteLine("Enter grade: ");
+            string grade = Console.ReadLine();
+            Console.WriteLine("Your entered grade is: " + grade);
+         
             // Get user input as string and assign to variable
-
+         
             // Create grade variable to hold grade to find (Any, Residential, or Commercial)
-
+         
             // Test input is "0"
-                // Assign "Any" to grade
+            // Assign "Any" to grade
             // Test input is "1"
-                // Assign "Residential" to grade
+            // Assign "Residential" to grade
             // Test input is "2"
-                // Assign "Commercial" to grade
+            // Assign "Commercial" to grade
             // Otherwise (input is something else)
-                // Write "Invalid option."
-
-                // Return to calling (previous) method
-                // return;
-
+            // Write "Invalid option."
+         
+         
+            if (grade = 0)
+            {
+                grade = "Any";
+            }
+            else if (grade = 1)
+            {
+                grade = "Residential";
+            }
+            else if (grade = 2)
+            {
+                grade = "Commercial";
+            }
+            else
+            {
+                Console.WriteLine("Invalid opition");
+            }
+         
+            // Return to calling (previous) method
+         
+            return;
+         
             // Write "Possible options:"
-
+         
+            Console.WriteLine("Possible options:");
+         
             // Write "0 - Any"
             // Write "1 - 18 Volt"
             // Write "2 - 24 Volt"
-
+         
+            Console.WriteLine("0 - Any");
+            Console.WriteLine("1 - 18 Volt");
+            Console.WriteLine("2 - 24 Volt");
+         
             // Write "Enter voltage:"
-
             // Get user input as string
             // Create variable to hold voltage
-
+         
+            Console.WriteLine("Enter voltage:");
+            string voltage = Console.ReadLine();
+            Console.WriteLine("Your inputed voltage is:" + voltage);
+         
+         
             // Test input is "0"
-                // Assign 0 to voltage
+            // Assign 0 to voltage
             // Test input is "1"
-                // Assign 18 to voltage
+            // Assign 18 to voltage
             // Test input is "2"
-                // Assign 24 to voltage
+            // Assign 24 to voltage
             // Otherwise
-                // Write "Invalid option."
-                // Return to calling (previous) method
-                // return;
-
+            // Write "Invalid option."
+            // Return to calling (previous) method
+         
+            if (voltage = 0);
+            {
+                voltage = "Any";
+            }
+            else if (voltage = 1);
+            {
+                voltage = 18;
+            }
+            else if (voltage = 2);
+            {
+                voltage = 24;
+            }
+            else
+            {
+                Console.WriteLine("Invalid option");
+            }
+            return;
+         
             // Create found variable to hold list of found appliances.
-
+         
+            string[] found = { };
+         
             // Loop through Appliances
-                // Check if current appliance is vacuum
-                    // Down cast current Appliance to Vacuum object
-                    // Vacuum vacuum = (Vacuum)appliance;
-
-                    // Test grade is "Any" or grade is equal to current vacuum grade and voltage is 0 or voltage is equal to current vacuum voltage
-                        // Add current appliance in list to found list
-
+            // Check if current appliance is vacuum
+            // Down cast current Appliance to Vacuum object
+            string[] Appliances = {"Refigerator", "Vacuum", "Microwave", "Dishwasher" };
+            for (int i = 0;  i < Appliances.Length; i++)
+            {
+                Console.WriteLine(Appliances[i]);
+            }
+            Vacuum vacuum = (Vacuum)Appliances;
+         
+            // Test grade is "Any" or grade is equal to current vacuum grade and voltage is 0 or voltage is equal to current vacuum voltage
+            // Add current appliance in list to found list
+         
+            
+         
             // Display found appliances
-            // DisplayAppliancesFromList(found, 0);
+            DisplayAppliancesFromList(found, 0);
         }
-
-        /// <summary>
-        /// Displays microwaves
-        /// </summary>
         public override void DisplayMicrowaves()
         {
             // Write "Possible options:"
