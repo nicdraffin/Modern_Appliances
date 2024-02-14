@@ -18,36 +18,67 @@ namespace ModernAppliances
         public override void Checkout()
         {
             // Write "Enter the item number of an appliance: "
-
-            // Create long variable to hold item number
-
+            Console.WriteLine("Enter the item number of an appliance");
+        
             // Get user input as string and assign to variable.
+            string userInput = Console.ReadLine();
+        
+            // Create long variable to hold item number
             // Convert user input from string to long and store as item number variable.
-
+            if (!long.TryParse(userInput, out long itemNumber))
+            {
+                Console.WriteLine("Invalid input. Please enter a valid item number.\n");
+                return;
+            }
             // Create 'foundAppliance' variable to hold appliance with item number
+            Appliance? foundAppliance;
+        
             // Assign null to foundAppliance (foundAppliance may need to be set as nullable)
-
+            foundAppliance = null;
+        
             // Loop through Appliances
+            foreach (Appliance appliance in Appliances)
+            {
                 // Test appliance item number equals entered item number
+                if (appliance.ItemNumber == itemNumber)
+                {
                     // Assign appliance in list to foundAppliance variable
-
-                    // Break out of loop (since we found what need to)
-
+                    foundAppliance = appliance;
+        
+                    // Break out of loop (since we found what we need to)
+                    break;
+                }
+            }
+        
             // Test appliance was not found (foundAppliance is null)
+            if (foundAppliance == null)
+            {
                 // Write "No appliances found with that item number."
-
-            // Otherwise (appliance was found)
+                Console.WriteLine("No appliances found with that item number.");
+            }
+            else
+            {
+                // Otherwise (appliance was found)
                 // Test found appliance is available
-                    // Checkout found appliance
-
+                if (foundAppliance != null)
+                {
+                    // Otherwise (appliance isn't available)
                     // Write "Appliance has been checked out."
-                // Otherwise (appliance isn't available)
+                    Console.WriteLine("Appliance has been checked out.");
+        
+                    // Checkout found appliance
+                    foundAppliance.Checkout();
+                }
+        
+                else
+                {
+                    // Otherwise (appliance isn't available)
                     // Write "The appliance is not available to be checked out."
+                    Console.WriteLine("The appliance is not available to be checked out.");
+        
+                }
+            }
         }
-
-        /// <summary>
-        /// Option 2: Finds appliances
-        /// </summary>
         public override void Find()
         {
             // Write "Enter brand to search for:"
