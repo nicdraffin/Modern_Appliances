@@ -9,8 +9,8 @@ namespace ModernAppliances
     /// <summary>
     /// Manager class for Modern Appliances
     /// </summary>
-    /// <remarks>Author: </remarks>
-    /// <remarks>Date: </remarks>
+    /// <remarks>Author:Nic Draffin, Jihun Gwak </remarks>
+    /// <remarks>Date: 2024-02-14 </remarks>
     internal class MyModernAppliances : ModernAppliances
     {
         /// <summary>
