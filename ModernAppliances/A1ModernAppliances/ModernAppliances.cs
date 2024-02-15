@@ -1,4 +1,4 @@
-﻿using ModernAppliances.Entities;
+using ModernAppliances.Entities;
 using ModernAppliances.Entities.Abstract;
 
 namespace ModernAppliances
@@ -88,7 +88,7 @@ namespace ModernAppliances
             Console.WriteLine("3 – Microwaves");
             Console.WriteLine("4 – Dishwashers");
 
-            Console.Write("Enter type of appliance:");
+            Console.Write("Enter type of appliance:\n");
 
             int applianceTypeNum;
             bool parsedApplianceType = int.TryParse(Console.ReadLine(), out applianceTypeNum);
@@ -266,11 +266,11 @@ namespace ModernAppliances
             int width = int.Parse(parts[7]);
             int height = int.Parse(parts[8]);
 
-            Refrigerator refrigerator = new Refrigerator(itemNumber, brand, quantity, wattage, color, price, doors, width, height);
+            Refrigerator refrigerator = new Refrigerator(itemNumber, brand, quantity, wattage, color, price, doors, height, width);
 
             return refrigerator;
         }
-
+         
         /// <summary>
         /// Creates Vacuum object from parts
         /// </summary>
@@ -352,7 +352,7 @@ namespace ModernAppliances
         {
             if (appliances.Count > 0)
             {
-                Console.WriteLine("Found appliances:");
+                Console.WriteLine("Matching Appliances:");
                 Console.WriteLine();
 
                 // Display found appliances until either end of list is reached or number of appliances requested is shown.
@@ -373,3 +373,4 @@ namespace ModernAppliances
         }
     }
 }
+
